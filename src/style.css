@@ -1,0 +1,74 @@
+/* Oswald is the signature face of this brand */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* ---- Cat Energy design tokens ---- */
+@theme {
+  --color-green: #68b738;
+  --color-green-dark: #5fa73a;
+  --color-green-darker: #619636;
+  --color-ink: #111111;
+  --color-graphite: #444444;
+  --color-muted: #888888;
+  --color-cloud: #f2f2f2;
+  --color-line: #e6e6e6;
+  --color-yellow: #f7e296;
+
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Oswald is the signature face of this brand */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Range slider (before / after) styling */
+.ba-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.ba-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background: #cfcfcf;
+}
+.ba-range::-moz-range-track {
+  height: 2px;
+  background: #cfcfcf;
+}
+.ba-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -13px;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at center, var(--color-green) 0 4.5px, #fff 5.5px 100%);
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+.ba-range::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at center, var(--color-green) 0 4.5px, #fff 5.5px 100%);
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+.ba-range:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 2px;
+}
